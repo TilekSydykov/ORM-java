@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<database>
+
+    <table name="User">
+        <column name="id" type="int" primary="true" autoincrement="true"/>
+        <column name="name" type="String"/>
+        <column name="birthDate" type="Date"/>
+    </table>
+
+    <table name="Company">
+        <column name="id" type="int" primary="true" autoincrement="true"/>
+        <column name="name" type="String"/>
+        <column name="birthDate" type="Date" default="Date()"/>
+        <column name="about" type="longString"/>
+    </table>
+
+    <table name="Company1">
+        <column name="id" type="int" primary="true" autoincrement="true"/>
+        <column name="name" type="String"/>
+        <column name="birthDate" type="Date" default="Date()"/>
+        <column name="about" type="longString" null="true"/>
+    </table>
+
+</database>
