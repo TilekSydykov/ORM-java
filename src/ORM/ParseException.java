@@ -1,4 +1,4 @@
-package DB;
+package ORM;
 
 public class ParseException extends  Exception{
     public ParseException(String message) {

@@ -1,8 +1,9 @@
-package DB;
+package ORM;
 
-import DB.helpers.Column;
-import DB.helpers.Database;
-import DB.helpers.Table;
+import ORM.models.Column;
+import ORM.models.DBConfig;
+import ORM.models.Database;
+import ORM.models.Table;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -39,5 +40,24 @@ public class FileReader {
             database.addTable(t);
         }
         return database;
+    }
+
+    public DBConfig getConfig() throws Exception{
+        File file = new File(System.getProperty("user.dir")+"\\dbconfig.xml");
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        DocumentBuilder db = dbf.newDocumentBuilder();
+        Document doc = db.parse(file);
+        doc.getDocumentElement().normalize();
+        DBConfig config = new DBConfig();
+        Element element =(Element) doc.getElementsByTagName("database").item(0);
+
+        config.setDatabaseName(element.getAttribute("name"));
+        config.setDriver(element.getAttribute("driver"));
+        config.setUsername(element.getAttribute("user"));
+        config.setHost(element.getAttribute("host"));
+        config.setPort(element.getAttribute("port"));
+        config.setPassword(element.getAttribute("password"));
+
+        return config;
     }
 }

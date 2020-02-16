@@ -1,6 +1,7 @@
-package DB.helpers;
+package ORM.models;
 
-import DB.ParseException;
+import ORM.ParseException;
+import ORM.helpers.Functions;
 
 import java.util.ArrayList;
 
@@ -26,7 +27,7 @@ public class Table {
 
         cols = cols.substring(0, cols.length() - 1);
 
-        return query.replace("@column", cols);
+        return query.replace("@columns", cols);
     }
 
     public void setName(String name) {

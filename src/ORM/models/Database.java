@@ -1,6 +1,6 @@
-package DB.helpers;
+package ORM.models;
 
-import DB.ParseException;
+import ORM.ParseException;
 
 import java.util.ArrayList;
 

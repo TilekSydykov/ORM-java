@@ -1,6 +1,7 @@
-package DB.helpers;
+package ORM.models;
 
-import DB.ParseException;
+import ORM.ParseException;
+import ORM.helpers.Functions;
 
 public class Column {
     String name;

@@ -1,9 +1,9 @@
-package DB.helpers;
+package ORM.helpers;
 
-import DB.ParseException;
+import ORM.ParseException;
 
 public class Functions {
-    static String normalizeName(String name){
+    public static String normalizeName(String name){
         String nName = "";
         for (int i = 0; i < name.length(); i++) {
             char c = name.charAt(i);
@@ -16,7 +16,7 @@ public class Functions {
         return nName;
     }
 
-    static String normalizeType(String type) throws ParseException{
+    public static String normalizeType(String type) throws ParseException{
         String nType = "";
         switch (type){
             case "int":

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <database host="localhost" port="3306" name="test" user="tilek" password="123" driver="mysql"/>
+</config>
