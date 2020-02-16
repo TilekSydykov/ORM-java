@@ -13,6 +13,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 
 public class FileReader {
+
     public Database getSchema() throws Exception{
         File file = new File(System.getProperty("user.dir")+"\\schema.xml");
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -60,4 +61,5 @@ public class FileReader {
 
         return config;
     }
+
 }

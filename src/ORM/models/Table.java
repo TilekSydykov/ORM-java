@@ -2,7 +2,6 @@ package ORM.models;
 
 import ORM.ParseException;
 import ORM.helpers.Functions;
-
 import java.util.ArrayList;
 
 public class Table {
@@ -18,7 +17,7 @@ public class Table {
 
     public String create() throws ParseException {
         String name = Functions.normalizeName(this.name);
-        String query = String.format("CREATE TABLE %s{@columns}", name);
+        String query = String.format("CREATE TABLE %s(@columns)", name);
         String cols = "";
 
         for (Column c: columns) {
